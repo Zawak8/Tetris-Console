@@ -26,7 +26,11 @@ namespace Tetris_Console
                 if (Console.KeyAvailable)  // Continuing the game. Not waiting to press key
                 {
                     ConsoleKeyInfo key = Console.ReadKey();
-                    
+                    if (key.Key == ConsoleKey.Escape)
+                    {
+                        // alternative: Environment.Exit(0);
+                        return;
+                    }
                 }
                 // user input
                 // change state
