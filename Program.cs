@@ -10,9 +10,9 @@
         static void Main(string[] args)
         {
             Console.Title = "Tetris v1.0";
-            Console.WindowHeight = ConsoleRows;
+            Console.WindowHeight = ConsoleRows + 1;
             Console.WindowWidth = ConsoleCols;
-            Console.BufferHeight = ConsoleRows;
+            Console.BufferHeight = ConsoleRows + 1;
             Console.BufferWidth = ConsoleCols;
             DrawBorder();
 
