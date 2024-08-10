@@ -13,14 +13,23 @@ namespace Tetris_Console
         static void Main(string[] args)
         {
             Console.Title = "Tetris v1.0";
+            Console.CursorVisible = false;
             Console.WindowHeight = ConsoleRows + 1;
             Console.WindowWidth = ConsoleCols;
             Console.BufferHeight = ConsoleRows + 1;
             Console.BufferWidth = ConsoleCols;
-            Console.CursorVisible = false;
             DrawBorder();
-            DrawInfo();
-
+            
+            while (true)
+            {
+                Score++;
+                // user input
+                // change state
+                // redraw UI
+                DrawInfo();
+                // sleep(40)
+                Thread.Sleep(40);
+            }
             Console.ReadKey();
             /*
             ┌─┬┐  ╔═╦╗  ╓─╥╖  ╒═╤╕
