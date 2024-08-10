@@ -12,6 +12,9 @@
             Console.Title = "Tetris v1.0";
             Console.WindowHeight = ConsoleRows;
             Console.WindowWidth = ConsoleCols;
+            Console.BufferHeight = ConsoleRows;
+            Console.BufferWidth = ConsoleCols;
+            Console.WriteLine();
             Console.ReadKey();
 
         }
