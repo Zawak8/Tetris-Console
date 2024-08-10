@@ -28,17 +28,36 @@
         static void DrawBorder()
         {
             string line = "╔";
-            for (int i = 0; i < TetrisCols; i++)
+            for (int i = 0; i < TetrisCols; i++)  //alternative: line += new string('═', TetrisCols);
             {
                 line += "═";
             }
+
             line += "╦";
             for (int i = 0; i < InfoCols; i++)
             {
                 line += "═";
             }
+
             line += "╗";
             Console.WriteLine(line);
+
+            string middleLine = "║";
+            middleLine += new string(' ', TetrisCols);
+            middleLine += "║";
+            middleLine += new string(' ', InfoCols);
+            middleLine += "║";
+            for (int i = 0; i < TetrisRows; i++)
+            {
+                Console.WriteLine(middleLine);
+            }
+
+            string bottomLine = "╚";
+            bottomLine += new string('═', TetrisCols);
+            bottomLine += "╩";
+            bottomLine += new string('═', InfoCols);
+            bottomLine += "╝";
+            Console.WriteLine(bottomLine);
         }
         static void Write(string text, int row, int col, ConsoleColor color = ConsoleColor.Yellow)
         {
