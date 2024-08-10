@@ -17,6 +17,7 @@ namespace Tetris_Console
             Console.WindowWidth = ConsoleCols;
             Console.BufferHeight = ConsoleRows + 1;
             Console.BufferWidth = ConsoleCols;
+            Console.CursorVisible = false;
             DrawBorder();
             DrawInfo();
 
