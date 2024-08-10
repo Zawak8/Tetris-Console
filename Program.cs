@@ -14,11 +14,32 @@
             Console.WindowWidth = ConsoleCols;
             Console.BufferHeight = ConsoleRows;
             Console.BufferWidth = ConsoleCols;
-            Console.WriteLine();
+            DrawBorder();
+
             Console.ReadKey();
+            /*
+            ┌─┬┐  ╔═╦╗  ╓─╥╖  ╒═╤╕
+            │ ││  ║ ║║  ║ ║║  │ ││
+            ├─┼┤  ╠═╬╣  ╟─╫╢  ╞═╪╡
+            └─┴┘  ╚═╩╝  ╙─╨╜  ╘═╧╛
+             */
 
         }
-
+        static void DrawBorder()
+        {
+            string line = "╔";
+            for (int i = 0; i < TetrisCols; i++)
+            {
+                line += "═";
+            }
+            line += "╦";
+            for (int i = 0; i < InfoCols; i++)
+            {
+                line += "═";
+            }
+            line += "╗";
+            Console.WriteLine(line);
+        }
         static void Write(string text, int row, int col, ConsoleColor color = ConsoleColor.Yellow)
         {
             Console.ForegroundColor = color;
