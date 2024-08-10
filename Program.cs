@@ -1,4 +1,5 @@
-﻿namespace Tetris_Console
+﻿
+namespace Tetris_Console
 {
     internal class Program
     {
@@ -7,6 +8,8 @@
         static int InfoCols = 10;
         static int ConsoleRows = 1 + TetrisRows + 1;
         static int ConsoleCols = 1 + TetrisCols + 1 + InfoCols + 1;
+
+        static int Score = 0;
         static void Main(string[] args)
         {
             Console.Title = "Tetris v1.0";
@@ -15,6 +18,7 @@
             Console.BufferHeight = ConsoleRows + 1;
             Console.BufferWidth = ConsoleCols;
             DrawBorder();
+            DrawInfo();
 
             Console.ReadKey();
             /*
@@ -25,6 +29,13 @@
              */
 
         }
+
+        private static void DrawInfo()
+        {
+            Write("Score:", 1, 1 + TetrisCols + 1);
+            Write(Score.ToString(), 2, 1 + TetrisCols + 1);
+        }
+
         static void DrawBorder()
         {
             string line = "╔";
