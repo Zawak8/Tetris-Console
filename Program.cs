@@ -23,6 +23,11 @@ namespace Tetris_Console
             while (true)
             {
                 Score++;
+                if (Console.KeyAvailable)  // Continuing the game. Not waiting to press key
+                {
+                    ConsoleKeyInfo key = Console.ReadKey();
+                    
+                }
                 // user input
                 // change state
                 // redraw UI
